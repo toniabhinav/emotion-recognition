@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at top, #0a1f2d, #020d14);
+    color: #e0f7fa;
+    text-align: center;
+}
+
+/* Container */
+.container {
+    padding: 30px;
+}
+
+/* Title */
+h1 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* 🌊 Tabs */
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.tab {
+    padding: 10px 22px;
+    border-radius: 30px;
+    border: none;
+    background: rgba(255,255,255,0.05);
+    color: #9ccfd8;
+    cursor: pointer;
+    backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+}
+
+.tab:hover {
+    background: rgba(0,255,200,0.15);
+    color: white;
+}
+
+.tab.active {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    box-shadow: 0 0 12px rgba(0,198,255,0.6);
+}
+
+/* 🎯 Tab Content Animation */
+.tab-content {
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🧊 Card */
+.card {
+    background: rgba(255,255,255,0.06);
+    border-radius: 22px;
+    padding: 22px;
+    width: 420px;
+    margin: auto;
+    backdrop-filter: blur(18px);
+    box-shadow:
+        0 8px 30px rgba(0,0,0,0.6),
+        inset 0 0 10px rgba(255,255,255,0.05);
+    transition: 0.3s ease;
+}
+
+/* Video */
+video {
+    width: 100%;
+    border-radius: 16px;
+}
+
+/* 😄 Emotion Box */
+.emotion-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin-top: 18px;
+}
+
+#emoji {
+    font-size: 52px;
+}
+
+/* Text */
+#emotion {
+    margin: 0;
+}
+
+#confidence {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #9ccfd8;
+}
+
+/* 📊 Graph */
+.graph {
+    margin-top: 20px;
+    width: 320px;
+    border-radius: 12px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.graph.show {
+    opacity: 1;
+}
+
+/* ✨ Button */
+button {
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,198,255,0.4);
+}
+
+.history-box {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #9ccfd8;
+}

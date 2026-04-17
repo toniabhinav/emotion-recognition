@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emotion AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Emotion AI</h1>
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <button class="tab active" onclick="switchTab('main', event)">Dashboard</button>
+        <button class="tab" onclick="switchTab('analytics', event)">Analytics</button>
+    </div>
+
+    <!-- MAIN -->
+    <div id="main" class="tab-content active">
+
+        <div class="card">
+            <video id="video" autoplay></video>
+
+            <div class="emotion-box">
+                <span id="emoji">🙂</span>
+                <div>
+                    <h2 id="emotion">Detecting...</h2>
+                    <p id="confidence">Confidence: --</p>
+                </div>
+            </div>
+
+            <!-- 🧠 HISTORY -->
+            <div class="history-box">
+                <h3>Recent Emotions</h3>
+                <p id="history">--</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ANALYTICS -->
+    <div id="analytics" class="tab-content">
+        <div class="card">
+            <button onclick="generateGraph()">📊 Generate Graph</button>
+            <img id="graph" class="graph"/>
+        </div>
+    </div>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
